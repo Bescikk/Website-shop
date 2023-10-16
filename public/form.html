@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="images/ikona.png" />
+		<meta name="description" content="Website of LIF shop." />
+		<meta name="author" content="Author: Konrad Pulchny" />
+		<link href="./css/stylev60.css" rel="stylesheet" type="text/css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://js.stripe.com/v3/"></script>
+		<title>Formularz dostawy</title>
+	</head>
+	<body>
+		<!-- koszyk -->
+		<div class="cart">
+			<h2 class="cart-title">Twój koszyk</h2>
+
+			<div class="cart-content"></div>
+
+			<div class="total">
+				<div class="total-title">Total</div>
+				<div class="total-price">0zł</div>
+			</div>
+			<!-- buy button -->
+			<button class="pay-button" id="checkout">Zapłać</button>
+		</div>
+		<div class="form-container">
+			<button class="button-buy">
+				<a href="index.html" class="button_top">
+					<span> Powrót do strony głównej </span>
+				</a>
+			</button>
+		</div>
+		<div class="wrapperForm">
+			<form class="form" action="https://formsubmit.co/kontakt@lifclo.pl" method="POST">
+				<div class="title">
+					Wypełnij formularz
+					<br />
+					dostawy do paczkomatu
+				</div>
+				<input class="input" placeholder="Imię" type="text" name="imie" required />
+				<input class="input" placeholder="Nazwisko" type="text" name="nazwisko" required />
+				<input class="input" type="email" name="email" placeholder="Email Address" required />
+				<input
+					class="input"
+					placeholder="Numer Telefonu"
+					type="tel"
+					name="numer_telefonu"
+					pattern="[0-9]{9,}"
+					required
+				/>
+				<input class="input" placeholder="Numer Paczkomatu" type="text" name="numer_paczkomatu" required />
+				<input type="hidden" name="_next" value="http://www.lifclo.pl/transfer.html" />
+				<input type="hidden" name="_template" value="table" />
+				<input
+					type="hidden"
+					name="_autoresponse"
+					value="Siema! Dzięki za zakup. 
+          Przesyłka zostanie wysłana do dwóch dni roboczych od 
+          dnia zaksięgowania płatności. Pozdro, LIF!"
+				/>
+				<button class="button-confirm" type="submit">Płacę!</button>
+			</form>
+		</div>
+	</body>
+	<script src="./scripts/script-formv60.js"></script>
+</html>

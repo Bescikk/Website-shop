@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="images/ikona.png" />
+		<meta name="description" content="Website of LIF shop." />
+		<meta name="author" content="Author: Konrad Pulchny" />
+		<link href="./css/stylev60.css" rel="stylesheet" type="text/css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://js.stripe.com/v3/"></script>
+		<title>LiF</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bg-video">
+				<img src="./images/tlo/DSC_1902-Edit-min.png" alt="Slajd 1" />
+				<img src="./images/tlo/DSC_1984-min.png" alt="Slajd 2" />
+				<img src="./images/tlo/DSC_2124-min.png" alt="Slajd 3" />
+				<img src="./images/tlo/DSC_2272-min.png" alt="Slajd 4" />
+				<img src="./images/tlo/DSC_2285-min.png" alt="Slajd 5" />
+				<img src="./images/tlo/DSC_2476-min.png" alt="Slajd 6" />
+				<img src="./images/tlo/DSC_2525-min.png" alt="Slajd 7" />
+				<img src="./images/tlo/Warstwa 2-min.png" alt="Slajd 8" />
+			</div>
+
+			<div class="content-new">
+				<div class="header">
+					<div class="container">
+						<div class="navbar">
+							<div class="logo">
+								<a href="index.html">
+									<video class="logo-video" autoplay loop muted>
+										<source src="images/RUCHOME LOGO.webm" type="video/webm" />
+									</video>
+								</a>
+							</div>
+							<nav>
+								<ul id="MenuItems">
+									<li><a href="index.html">Główna</a></li>
+									<li>
+										<a href="products.html">Produkty</a>
+									</li>
+									<!-- <li><a href="about.html">O nas</a></li> -->
+									<li id="cart-icon">Koszyk</li>
+								</ul>
+							</nav>
+							<img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()" />
+						</div>
+					</div>
+				</div>
+				<!-- koszyk -->
+				<div class="cart">
+					<h2 class="cart-title">Twój koszyk</h2>
+
+					<div class="cart-content"></div>
+					<div class="delivery">Dostawa: 17 zł</div>
+					<div class="total">
+						<div class="total-title">Total</div>
+						<div class="total-price">0zł</div>
+					</div>
+					<!-- buy button -->
+					<a href="./form.html">
+						<button class="pay-button">Przejdź dalej</button>
+					</a>
+
+					<!-- close button -->
+					<img src="images/x.png" id="close-cart" />
+				</div>
+
+				<!-- produkty -->
+
+				<div class="categories">
+					<div class="small-container">
+						<div class="row row-small">
+							<div class="col-2">
+								<a href="product1.html"><img src="images/t-shirt1.jpg" width="100%" class="ProductImg-small" /></a>
+								<h4 class="left product-title">Logo tees</h4>
+								<h4 class="right product-price">119,-</h4>
+							</div>
+							<div class="col-2">
+								<a href="product2.html"><img src="images/t-shirt2.jpg" width="100%" class="ProductImg-small" /></a>
+								<h4 class="left product-title">Miś tees</h4>
+								<h4 class="right product-price">139,-</h4>
+							</div>
+							<div class="col-2">
+								<a href="product3.html"><img src="images/t-shirt3.jpg" width="100%" class="ProductImg-small" /></a>
+								<h4 class="left product-title">Skolo tees</h4>
+								<h4 class="right product-price">119,-</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- special / dodatki / usunac -->
+
+				<div class="special">
+					<div class="small-container">
+						<div class="row">
+							<div class="col-3">
+								<div class="col-3-text">
+									<h2>DO KAŻDEGO ZAMÓWIENIA!</h2>
+									<p>
+										Każde zamówienie dostarczamy w handmade boxie, w którym znajduję się
+										<br />
+										- zakupiona koszulka
+										<br />
+										- pakiet wlep
+										<br />
+										- podziękowania
+									</p>
+									<br />
+									<button class="button-buy">
+										<a href="products.html" class="button_top">
+											<span> Kup teraz! </span>
+										</a>
+									</button>
+								</div>
+								<div class="col-3-img">
+									<img src="images/special.jpg" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="boxes">
+					<div class="small-container">
+						<div class="logos">
+							<div class="logos-slide">
+								<img src="images/rolka/zdjecie1.jpg" alt="Zdjęcie 1" />
+								<img src="images/rolka/zdjecie2.jpg" alt="Zdjęcie 2" />
+								<img src="images/rolka/zdjecie3.jpg" alt="Zdjęcie 3" />
+								<img src="images/rolka/zdjecie4.jpg" alt="Zdjęcie 4" />
+								<img src="images/rolka/zdjecie5.jpg" alt="Zdjęcie 5" />
+								<img src="images/rolka/zdjecie6.jpg" alt="Zdjęcie 6" />
+								<img src="images/rolka/zdjecie7.jpg" alt="Zdjęcie 7" />
+								<img src="images/rolka/zdjecie8.jpg" alt="Zdjęcie 8" />
+								<img src="images/rolka/zdjecie9.jpg" alt="Zdjęcie 9" />
+								<img src="images/rolka/zdjecie10.jpg" alt="Zdjęcie 10" />
+								<img src="images/rolka/zdjecie11.jpg" alt="Zdjęcie 11" />
+								<img src="images/rolka/zdjecie12.jpg" alt="Zdjęcie 12" />
+								<img src="images/rolka/zdjecie13.jpg" alt="Zdjęcie 13" />
+								<img src="images/rolka/zdjecie14.jpg" alt="Zdjęcie 14" />
+								<img src="images/rolka/zdjecie15.jpg" alt="Zdjęcie 15" />
+								<img src="images/rolka/zdjecie16.jpg" alt="Zdjęcie 16" />
+								<img src="images/rolka/zdjecie17.jpg" alt="Zdjęcie 17" />
+								<img src="images/rolka/zdjecie18.jpg" alt="Zdjęcie 18" />
+								<img src="images/rolka/zdjecie19.jpg" alt="Zdjęcie 19" />
+								<img src="images/rolka/zdjecie20.jpg" alt="Zdjęcie 20" />
+								<img src="images/rolka/zdjecie21.jpg" alt="Zdjęcie 21" />
+								<img src="images/rolka/zdjecie22.jpg" alt="Zdjęcie 22" />
+								<img src="images/rolka/zdjecie23.jpg" alt="Zdjęcie 23" />
+								<img src="images/rolka/zdjecie24.jpg" alt="Zdjęcie 24" />
+								<img src="images/rolka/zdjecie25.jpg" alt="Zdjęcie 25" />
+								<img src="images/rolka/zdjecie26.jpg" alt="Zdjęcie 26" />
+								<img src="images/rolka/zdjecie27.jpg" alt="Zdjęcie 27" />
+								<img src="images/rolka/zdjecie28.jpg" alt="Zdjęcie 28" />
+								<img src="images/rolka/zdjecie29.jpg" alt="Zdjęcie 29" />
+								<img src="images/rolka/zdjecie30.jpg" alt="Zdjęcie 30" />
+								<img src="images/rolka/zdjecie31.jpg" alt="Zdjęcie 31" />
+								<img src="images/rolka/zdjecie32.jpg" alt="Zdjęcie 32" />
+								<img src="images/rolka/zdjecie33.jpg" alt="Zdjęcie 33" />
+								<img src="images/rolka/zdjecie34.jpg" alt="Zdjęcie 34" />
+								<img src="images/rolka/zdjecie35.jpg" alt="Zdjęcie 35" />
+							</div>
+							<div class="logos-slide">
+								<img src="images/rolka/zdjecie1.jpg" alt="Zdjęcie 1" />
+								<img src="images/rolka/zdjecie2.jpg" alt="Zdjęcie 2" />
+								<img src="images/rolka/zdjecie3.jpg" alt="Zdjęcie 3" />
+								<img src="images/rolka/zdjecie4.jpg" alt="Zdjęcie 4" />
+								<img src="images/rolka/zdjecie5.jpg" alt="Zdjęcie 5" />
+								<img src="images/rolka/zdjecie6.jpg" alt="Zdjęcie 6" />
+								<img src="images/rolka/zdjecie7.jpg" alt="Zdjęcie 7" />
+								<img src="images/rolka/zdjecie8.jpg" alt="Zdjęcie 8" />
+								<img src="images/rolka/zdjecie9.jpg" alt="Zdjęcie 9" />
+								<img src="images/rolka/zdjecie10.jpg" alt="Zdjęcie 10" />
+								<img src="images/rolka/zdjecie11.jpg" alt="Zdjęcie 11" />
+								<img src="images/rolka/zdjecie12.jpg" alt="Zdjęcie 12" />
+								<img src="images/rolka/zdjecie13.jpg" alt="Zdjęcie 13" />
+								<img src="images/rolka/zdjecie14.jpg" alt="Zdjęcie 14" />
+								<img src="images/rolka/zdjecie15.jpg" alt="Zdjęcie 15" />
+								<img src="images/rolka/zdjecie16.jpg" alt="Zdjęcie 16" />
+								<img src="images/rolka/zdjecie17.jpg" alt="Zdjęcie 17" />
+								<img src="images/rolka/zdjecie18.jpg" alt="Zdjęcie 18" />
+								<img src="images/rolka/zdjecie19.jpg" alt="Zdjęcie 19" />
+								<img src="images/rolka/zdjecie20.jpg" alt="Zdjęcie 20" />
+								<img src="images/rolka/zdjecie21.jpg" alt="Zdjęcie 21" />
+								<img src="images/rolka/zdjecie22.jpg" alt="Zdjęcie 22" />
+								<img src="images/rolka/zdjecie23.jpg" alt="Zdjęcie 23" />
+								<img src="images/rolka/zdjecie24.jpg" alt="Zdjęcie 24" />
+								<img src="images/rolka/zdjecie25.jpg" alt="Zdjęcie 25" />
+								<img src="images/rolka/zdjecie26.jpg" alt="Zdjęcie 26" />
+								<img src="images/rolka/zdjecie27.jpg" alt="Zdjęcie 27" />
+								<img src="images/rolka/zdjecie28.jpg" alt="Zdjęcie 28" />
+								<img src="images/rolka/zdjecie29.jpg" alt="Zdjęcie 29" />
+								<img src="images/rolka/zdjecie30.jpg" alt="Zdjęcie 30" />
+								<img src="images/rolka/zdjecie31.jpg" alt="Zdjęcie 31" />
+								<img src="images/rolka/zdjecie32.jpg" alt="Zdjęcie 32" />
+								<img src="images/rolka/zdjecie33.jpg" alt="Zdjęcie 33" />
+								<img src="images/rolka/zdjecie34.jpg" alt="Zdjęcie 34" />
+								<img src="images/rolka/zdjecie35.jpg" alt="Zdjęcie 35" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer -->
+
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="footer-col-1">
+								<h3>Adres</h3>
+								<p>
+									Kołobrzeska 14/45,
+									<br />
+									85-704 Bydgoszcz
+								</p>
+							</div>
+							<div class="footer-col-3">
+								<h3>Wszelki kontakt prosimy kierować na:</h3>
+								<p>
+									<a href="mailto:kontakt@lifclo.pl"> kontakt@lifclo.pl </a>
+									<br />
+									<a href="https://www.instagram.com/lif.clo/" target="_blank"> instagram.com/lif.clo </a>
+								</p>
+							</div>
+							<div class="footer-col-4">
+								<h3>Nasze sociale</h3>
+								<ul class="horizontal-items">
+									<li>
+										<a href="https://www.instagram.com/lif.clo/" target="_blank">
+											<img src="images/ig.svg" />
+										</a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/profile.php?id=100049790810500" target="_blank">
+											<img src="images/fb.svg" />
+										</a>
+									</li>
+									<li>
+										<a href="https://www.tiktok.com/@lif.clo" target="_blank">
+											<img src="images/tik-tok.svg" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<p class="copyright">Copyright 2023 - LIF</p>
+				</div>
+				<div id="scroll-arrow" class="hidden">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						fill="currentColor"
+						class="bi bi-arrow-down"
+						viewBox="0 0 16 16"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M8 1a.5.5 0 0 1 .5.5v11.793l1.646-1.647a.5.5 0 0 1 .708.708l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+						/>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<!-- js -->
+		<script src="./scripts/script-indexv60.js"></script>
+		<script>
+			const slides = document.querySelectorAll('.bg-video img');
+			let currentSlide = 0;
+
+			function showSlide(index) {
+				slides[currentSlide].style.display = 'none';
+				currentSlide = (index + slides.length) % slides.length;
+				slides[currentSlide].style.display = 'block';
+			}
+
+			function nextSlide() {
+				showSlide(currentSlide + 1);
+			}
+
+			setInterval(nextSlide, 700); // Zmieniaj slajdy co 1 sekundę
+		</script>
+	</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="images/ikona.png" />
+		<meta name="description" content="Website of LIF shop." />
+		<meta name="author" content="Author: Konrad Pulchny" />
+		<link href="./css/stylev60.css" rel="stylesheet" type="text/css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/77d0a72d5a.js" crossorigin="anonymous"></script>
+		<script src="https://js.stripe.com/v3/"></script>
+		<title>LiF</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="bg-video">
+				<img src="./images/tlo/DSC_1902-Edit-min.png" alt="Slajd 1" />
+				<img src="./images/tlo/DSC_1984-min.png" alt="Slajd 2" />
+				<img src="./images/tlo/DSC_2124-min.png" alt="Slajd 3" />
+				<img src="./images/tlo/DSC_2272-min.png" alt="Slajd 4" />
+				<img src="./images/tlo/DSC_2285-min.png" alt="Slajd 5" />
+				<img src="./images/tlo/DSC_2476-min.png" alt="Slajd 6" />
+				<img src="./images/tlo/DSC_2525-min.png" alt="Slajd 7" />
+				<img src="./images/tlo/Warstwa 2-min.png" alt="Slajd 8" />
+			</div>
+			<div class="content-new-cart">
+				<div class="header">
+					<div class="container">
+						<div class="navbar">
+							<div class="logo">
+								<a href="index.html">
+									<video class="logo-video" autoplay loop muted>
+										<source src="images/RUCHOME LOGO.webm" type="video/webm" />
+									</video>
+								</a>
+							</div>
+							<nav>
+								<ul id="MenuItems">
+									<li><a href="index.html">Główna</a></li>
+									<li>
+										<a href="products.html">Produkty</a>
+									</li>
+									<!-- <li><a href="about.html">O nas</a></li> -->
+									<li id="cart-icon">Koszyk</li>
+								</ul>
+							</nav>
+							<img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()" />
+						</div>
+					</div>
+				</div>
+				<!-- koszyk -->
+				<div class="cart">
+					<h2 class="cart-title">Twój koszyk</h2>
+
+					<div class="cart-content"></div>
+					<div class="delivery">Dostawa: 17 zł</div>
+					<div class="total">
+						<div class="total-title">Total</div>
+						<div class="total-price">0zł</div>
+					</div>
+					<!-- buy button -->
+					<a href="./form.html">
+						<button class="pay-button">Przejdź dalej</button>
+					</a>
+					<!-- close button -->
+					<img src="images/x.png" id="close-cart" />
+				</div>
+				<!-- produkty -->
+
+				<div class="categories">
+					<div class="small-container">
+						<div class="row">
+							<div class="col-2">
+								<a href="product1.html">
+									<img src="images/t-shirt1.jpg" width="100%" class="ProductImg-small" />
+								</a>
+								<h4 class="left">Logo tees</h4>
+								<h4 class="right">119,-</h4>
+							</div>
+							<div class="col-2">
+								<a href="product2.html">
+									<img src="images/t-shirt2.jpg" width="100%" class="ProductImg-small" />
+								</a>
+								<h4 class="left">Miś tees</h4>
+								<h4 class="right">139,-</h4>
+							</div>
+							<div class="col-2">
+								<a href="product3.html">
+									<img src="images/t-shirt3.jpg" width="100%" class="ProductImg-small" />
+								</a>
+								<h4 class="left">Skolo tees</h4>
+								<h4 class="right">119,-</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer -->
+
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="footer-col-1">
+								<h3>Adres</h3>
+								<p>
+									Kołobrzeska 14/45,
+									<br />
+									85-704 Bydgoszcz
+								</p>
+							</div>
+							<div class="footer-col-3">
+								<h3>Wszelki kontakt prosimy kierować na:</h3>
+								<p style="font-size: 17px">
+									kontakt@lifclo.pl
+									<br />
+									instagram.com/lif.clo
+								</p>
+							</div>
+							<div class="footer-col-4">
+								<h3>Nasze sociale</h3>
+								<ul class="horizontal-items">
+									<li>
+										<a href="https://www.instagram.com/lif.clo/" target="_blank">
+											<img src="images/ig.svg" />
+										</a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/profile.php?id=100049790810500" target="_blank">
+											<img src="images/fb.svg" />
+										</a>
+									</li>
+									<li>
+										<a href="https://www.tiktok.com/@lif.clo" target="_blank">
+											<img src="images/tik-tok.svg" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<p class="copyright">Copyright 2023 - LIF</p>
+				</div>
+			</div>
+		</div>
+		<!-- js -->
+		<script>
+			// Function to scroll the page to a specific percentage
+			function scrollToPercentage(percentage) {
+				var totalHeight = document.body.scrollHeight - window.innerHeight;
+				var scrollTo = (totalHeight * percentage) / 100;
+				window.scrollTo(0, scrollTo);
+			}
+
+			// Function to check screen width and trigger scrolling for 800px and lower
+			function checkScreenWidth() {
+				if (window.innerWidth >= 800) {
+					scrollToPercentage(800); // Change the percentage as needed
+				}
+			}
+
+			// Call the checkScreenWidth function when the page loads
+			window.addEventListener('load', checkScreenWidth);
+		</script>
+		<script src="./scripts/script-productsv60.js"></script>
+	</body>
+</html>
